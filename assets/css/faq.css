@@ -1,0 +1,77 @@
+a {
+    text-decoration: none;
+}
+
+/* Får kontakt knap til at stå til højre */
+.knapWrapper {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/* ACCORDIANS */
+.FAQ {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    padding-top: var(--sectionPadding);
+}
+
+.accordionItem {
+    background-color: var(--secondaryColor);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+
+.accordionKnap {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: var(--gap);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.accordionKnap.aktiv {
+    i {
+        transform: rotate(180deg);
+    }
+
+}
+
+.accordionIndhold {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+
+
+
+
+    p,
+    h3 {
+
+        margin: var(--smallGap) var(--gap);
+    }
+}
+
+
+.accordionIndhold.aktiv {
+    max-height: 450px;
+    background-color: #FFD8E4;
+
+
+    a {
+        color: var(--textColor);
+        text-decoration: underline;
+    }
+}
+
+/* Gør udvalgt tekst fed */
+.fed {
+    font-weight: bolder;
+}

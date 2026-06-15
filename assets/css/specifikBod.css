@@ -1,0 +1,108 @@
+.introSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap);
+}
+
+/* Allergener section */
+.allergener {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+    }
+
+    p {
+        margin: 5px
+    }
+}
+
+.allergen {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--gap);
+}
+
+.allergeneIkon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--smallGap);
+
+    img {
+        width: 20px;
+        height: 20px;
+        border-radius: 100px;
+    }
+}
+
+
+/* Menukort */
+.menuHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.menuItems {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smallGap);
+
+    p {
+        margin: 0
+    }
+}
+
+.menuItem {
+    display: flex;
+    /* toggler mellem flex og none når man trykker på menu header */
+    flex-direction: column;
+
+}
+
+.menuItemHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gap);
+
+    h3 {
+        margin: 0;
+    }
+}
+
+/* Roterer pil når menuen er åben */
+.menuHeader i.roteret {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.samlingOverskrift {
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    margin: 40px 0 0 0;
+
+}
+
+.bodBillede {
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    margin-block: var(--gap);
+}
+
+.bodPlaceringsBillede {
+    width: 100%;
+    /* max-height: 250px; */
+    object-fit: cover;
+}

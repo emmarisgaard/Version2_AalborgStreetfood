@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Aalborg Streetfood byder på et bredt udvalg af street food fra hele verden og en masse forskellige og spændende aktiviteter og events. Besøg os og oplev stemningen, de lækkre madboder og hyggelige omgivelser i Aalborg.">
+    <meta name="keywords"
+        content="streetfood Aalborg, street food, madboder, mad Aalborg, spise ude Aalborg, Nordjylland, oplevelser, events Aalborg, aktiviteter Aalborg, Aalborg, comedy Aalborg, quiz Aalborg, karaoke Aalborg, børneaktiviteter Aalborg">
+    <title>Aalborg Streetfood - Forside</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/forside.css">
+    <script src="./assets/js/app.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+
+<body>
+    <header>
+        <!-- Header med logo og social media -->
+        <nav>
+            <a href="./index.html"><img src="./assets/img/logo.svg" alt="Aalborg Streetfood Logo"></a>
+            <ul>
+                <li><a href="https://www.facebook.com/aalborgstreetfoodmarkedmarket" target="_blank"
+                        rel="noopener noreferrer" aria-label="Besøg vores Facebook side"><i
+                            class="fa-brands fa-square-facebook" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/AalborgStreetfood" target="_blank" rel="noopener noreferrer"
+                        aria-label="Besøg vores Instagram profil"><i class="fa-brands fa-instagram"
+                            aria-hidden="true"></i></a></li>
+            </ul>
+            <!--aria-label og aria-hidden="true" er indsat efter lighthousetest og bruges til at forbedre tilgængeligheden af siden, så brugere med nedsat syn kan forstå, hvad ikonerne betyder. Dette er også gjort i den globale menu. Kilde: https://www.w3schools.com/accessibility/accessibility_labels.php -->
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero billede -->
+        <div class="heroBillede">
+            <img src="./assets/img/forsideBillede.webp" alt="forside headerbillede" fetchpriority="high">
+            <!-- fetchpriority="high" indsat efter lighthousetest. Kilde: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Attributes/fetchpriority?fbclid=IwY2xjawSXYMRleHRuA2FlbQIxMABicmlkETFyVzhyNGkyVDZpa09IdjQ0c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHhw8y8eECw4FIvLwAQrnkFinJetjuRGiSQqEJIi6pboWG-9w0EfVVKrQgiUx_aem_WgYf9Aj1LGfmT1ifzZ4w9A -->
+        </div>
+        <!-- Overlay section -->
+        <div class=" overlaySection">
+            <article class="introSection">
+                <h1>VELKOMMEN TIL AALBORG STREETFOOD</h1>
+                <p>Mere end streetfood - Aalborg Streetfood er stedet, hvor smage, mennesker og oplevelser mødes. Nyd
+                    mad fra hele verden samt underholdende aktiviteter og events.</p>
+            </article>
+
+            <!-- CTA cirkler -->
+            <article class="CTASection">
+                <a href="./boder.html" class="CTA">
+                    <img src="./assets/img/boderBilledLille.webp" alt="Boder">
+                    <h2>Boder</h2>
+                </a>
+                <a href="./aktiviteter.html" class="CTA">
+                    <img src="./assets/img/aktiviteterBilledeLille.webp" alt="Aktiviteter billede">
+                    <h2>Aktiviteter</h2>
+                </a>
+                <a href="./events.html" class="CTA">
+                    <img src="./assets/img/eventsBilledeLille.webp" alt="Events billede">
+                    <h2>Events</h2>
+                </a>
+            </article>
+
+            <!-- Nyheder section -->
+            <article class="nyheder">
+                <h2>Nyheder</h2>
+                <div class="nyhedsCards">
+
+                    <!-- Nyhed 1 -->
+                    <a href="./specifikEvent.html?id=3793" class="nyhedsCard">
+                        <img src="./assets/img/boernenesDagLille.webp" alt="Billede fra børnenes dag">
+                        <div class="nyhedsCardText">
+                            <h3>Børnenes dag hver søndag</h3>
+                            <p>Hver søndag forvandles Aalborg Streetfood til et sandt kreativt paradis for de yngste.
+                            </p>
+                            <div class="knap">Læs mere</div>
+                        </div>
+                    </a>
+
+                    <!-- Nyhed 2 -->
+                    <a href="./specifikBod.html?id=3661" class="nyhedsCard">
+                        <img src="./assets/img/elsantoLille.webp" alt="Billede af den nye madbod El Santo">
+                        <div class="nyhedsCardText">
+                            <h3>Ny madbod: El Santo - Mexican Streetfood</h3>
+                            <p>Autentisk smag fra Mexico - oplev burritos, nachos og klassiske mexicanske favoritter.
+                            </p>
+                            <div class="knap">Læs mere</div>
+                        </div>
+                    </a>
+
+                    <!-- Nyhed 3 -->
+                    <a href="./specifikEvent.html?id=3803" class="nyhedsCard">
+                        <img src="./assets/img/Yoga-med-1Lille.webp"
+                            alt="Billede fra fra yoga på græsplænen med Amanda">
+                        <div class="nyhedsCardText">
+                            <h3>13. juni kl. 10-13: Yoga på græsplænen</h3>
+                            <p>Start dagen med ro og yoga i hyggelige omgivelser ved Limfjorden.
+                            </p>
+                            <div class="knap">Læs mere</div>
+                        </div>
+                    </a>
+
+                    <!-- Scroll pil -->
+                    <div class="scroll"> <i class="fa-solid fa-chevron-right"></i> </div>
+                </div>
+            </article>
+
+            <!-- CTA til Info og kontakt -->
+            <article class="questions">
+                <h2>Spørgsmål?</h2>
+                <p>Har du spørgsmål om Aalborg Streetfood, vores madboder, events eller aktiviteter? Find hurtigt svar
+                    eller kom i kontakt med os her.</p>
+                <div class="questionsButtons">
+                    <a href="./faq.html" class="knap">Se Info</a>
+                    <a href="./kontakt.html" class="knap">Kontakt os</a>
+                </div>
+
+            </article>
+        </div>
+
+    </main>
+    <footer>
+
+        <div class="openingHours">
+            <!-- Åbningstider indsættes med JavaScript på alle sider - se app.js-->
+        </div>
+
+        <!-- Global navigation i bunden af skærmen på alle sider -->
+        <nav class="globalNav">
+            <div>
+                <a href="./boder.html" aria-label="Gå til boder"><i class="fa-solid fa-utensils"
+                        aria-hidden="true"></i></a>
+                <p>Boder</p>
+            </div>
+            <div>
+                <a href="./events.html" aria-label="Gå til events"><i class="fa-solid fa-calendar-days"
+                        aria-hidden="true"></i></a>
+                <p>Events</p>
+            </div>
+            <div>
+                <a href="./aktiviteter.html" aria-label="Gå til aktiviteter"><i class="fa-solid fa-dice"
+                        aria-hidden="true"></i></a>
+                <p>Aktiviteter</p>
+            </div>
+            <div>
+                <a href="./kort.html" aria-label="Gå til kort"><i class="fa-solid fa-map-marker-alt"
+                        aria-hidden="true"></i></a>
+                <p>Kort</p>
+            </div>
+            <div>
+                <a href="./faq.html" aria-label="Gå til info"><i class="fa-solid fa-question-circle"
+                        aria-hidden="true"></i></a>
+                <p>Info</p>
+            </div>
+        </nav>
+
+    </footer>
+</body>
+
+</html>

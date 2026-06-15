@@ -1,0 +1,59 @@
+.introSektion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--smallGap);
+}
+
+
+/* Pakker sektion */
+
+.pakkerSektion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    margin-block: var(--sectionPadding);
+
+    .knap {
+        padding: var(--smallGap);
+        align-self: flex-end;
+        text-align: center;
+    }
+}
+
+.pakke {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    p {
+        margin: 0;
+    }
+}
+
+.pakkeHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: var(--gap);
+
+    h3 {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .pakkePris {
+        font-weight: bold;
+        white-space: nowrap;
+    }
+}
+
+
+
+/* Lokationskort */
+.aktivitetLokation {
+    width: 100%;
+    object-fit: cover;
+    margin-top: var(--gap);
+}

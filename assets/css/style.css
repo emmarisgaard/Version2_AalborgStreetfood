@@ -1,0 +1,566 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+
+    /* VARIABLER*/
+    /* FARVER */
+    --primaryColor: #01BFD3;
+    --lightPrimaryColor: #8FEAF4;
+    --secondaryColor: #FFBFD3;
+    --darkSecondaryColor: #f890b1;
+    --white: #FFFFFF;
+    --backgroundColor: #F0F7F8;
+    --textColor: #000000;
+
+
+    /* ikon farver */
+    --lightPink: #F3C0C0;
+    --lightYellow: #E9E79A;
+    --lightBrown: #CCA06E;
+    --lightGreen: #A7D9A6;
+    --lightBlue: #A6DEE4;
+
+
+    /* TYPOGRAPHY*/
+    --textFont: poppins, sans-serif;
+    --bodyText: 12px;
+    --headerTextSize: 28px;
+    --middleHeaderTextSize: 16px;
+    --smallHeaderTextSize: 12px;
+    --fontWeight: bold;
+
+    /* SPACING */
+    --gap: 20px;
+    --smallGap: 10px;
+    --sectionPadding: 40px;
+    --padding: 30px;
+
+    /*  GENERAL STYLING*/
+
+    * {
+        font-family: var(--textFont);
+    }
+
+    p {
+        font-size: var(--bodyText);
+        line-height: 150%;
+    }
+
+    h1 {
+        font-size: var(--headerTextSize);
+        font-weight: var(--fontWeight);
+    }
+
+    h2 {
+        font-size: var(--middleHeaderTextSize);
+        font-weight: var(--fontWeight);
+    }
+
+    h3 {
+        font-size: var(--smallHeaderTextSize);
+        font-weight: var(--fontWeight);
+    }
+
+
+    /* KNAPPER OG IKONER*/
+    /* buttons */
+    button,
+    .knap {
+        background-color: var(--secondaryColor);
+        color: var(--textColor);
+        width: 100px;
+        height: 30px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: var(--bodyText);
+        font-family: var(--textFont);
+    }
+
+    /* Hover effekt */
+    button:hover,
+    .knap:hover {
+        background-color: var(--darkSecondaryColor);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Active effekt */
+    button:active,
+    .knap:active {
+        background-color: var(--darkSecondaryColor);
+        box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .allergeneIkon {
+        color: var(--textColor)
+    }
+
+    .tilbageKnap {
+        color: var(--textColor);
+        font-size: var(--smallHeaderTextSize);
+
+    }
+
+
+    /* HEADER */
+    header {
+        height: 90px;
+        background-color: var(--primaryColor);
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+
+        }
+
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--gap);
+
+            li {
+                list-style: none;
+
+                a {
+                    text-decoration: none;
+
+                }
+            }
+        }
+
+        i {
+            color: var(--white);
+            font-size: 30px;
+        }
+
+        img {
+            height: 60px;
+        }
+
+
+    }
+
+    /* STYLES */
+    /* General styling, der går igen på tværs af siderne */
+    .heroBillede {
+        top: 90px;
+        left: 0;
+        right: 0;
+        position: fixed;
+
+
+        img {
+            height: 250px;
+            width: 100%;
+            position: relative;
+            object-fit: cover;
+        }
+    }
+
+    .overlaySection {
+        background-color: var(--backgroundColor);
+        border-radius: 50px 50px 0 0;
+        position: absolute;
+        top: 250px;
+        left: 0;
+        right: 0;
+        padding: 20px;
+        padding-bottom: 200px;
+    }
+
+    hr {
+        width: 100%;
+        height: 3px;
+        border: none;
+        background-color: var(--primaryColor);
+        margin-block: var(--gap);
+    }
+
+
+
+
+    /* GLOBAL NAVIGATION */
+    footer {
+        /* Gør sådan vores footer/bottom nav, forbliver i bunden af skærmen, foran andet indhold */
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+
+        nav {
+            height: 100%;
+            background-color: var(--primaryColor);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: var(--smallGap);
+
+            color: var(--textColor);
+            font-size: var(--middleHeaderTextSize);
+            font-weight: var(--fontWeight);
+
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 70px;
+
+                p {
+                    margin: 5px;
+                }
+            }
+
+
+            a {
+                text-decoration: none;
+                color: var(--textColor);
+                font-size: 30px;
+            }
+
+            .active {
+                /* Ændrer ikon og tekst i navigationen for den specifikke side man er inde på */
+                text-decoration: underline;
+                text-underline-offset: 5px;
+                text-decoration-thickness: 2px;
+                text-decoration-color: var(--secondaryColor);
+
+                a {
+                    color: var(--secondaryColor);
+                }
+            }
+
+            a:active {
+                color: var(--darkSecondaryColor);
+            }
+
+
+        }
+    }
+
+}
+
+
+
+/* KALENDER */
+
+
+
+.openingHours {
+    background-color: var(--white);
+    height: auto;
+    border-radius: 50px 50px 0 0;
+    box-shadow: 5px -5px 5px rgba(0, 0, 0, 0.1);
+    padding: var(--smallGap);
+    transition: all 0.3s ease;
+
+    .whenClosed {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-family: var(--textFont);
+        font-size: var(--smallHeaderTextSize);
+        margin: 0;
+        padding-inline: var(--gap);
+
+        .clickHere {
+            text-decoration: underline;
+            margin: 0;
+        }
+
+        .clickHere:active {
+            font-weight: 600;
+        }
+
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .fullOpeninghours,
+    .fullOpeninghoursFood {
+        display: block;
+        transform: translateY(30px);
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        pointer-events: none;
+
+        .toggle {
+            display: flex;
+            justify-content: center;
+            padding-top: var(--gap);
+
+        }
+
+
+
+        .forskelligeTidsintervaller {
+            display: flex;
+            justify-content: space-between;
+            padding-top: var(--gap);
+
+
+            .tidsinterval.gone {
+                opacity: 0;
+            }
+
+            .tidsinterval {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                div {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+
+                }
+
+                .pink {
+                    background-color: var(--lightPink);
+                }
+
+                .gul {
+                    background-color: var(--lightYellow);
+                }
+
+                .brun {
+                    background-color: var(--lightBrown);
+                }
+
+                .grøn {
+                    background-color: var(--lightGreen);
+                }
+
+            }
+        }
+
+        .kalender {
+
+            .kalenderTop {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    margin-bottom: 5px;
+                }
+            }
+
+            .kalenderen {
+
+                .ugedage {
+                    display: flex;
+                    justify-content: space-between;
+                    padding: 5px;
+
+                    p {
+                        margin: 5px;
+                    }
+                }
+
+                hr {
+                    height: 1px;
+                    background-color: var(--textColor);
+                    width: 100%;
+                    margin-bottom: var(--gap);
+                    margin-top: 0;
+                }
+
+                .kalenderDage {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--smallGap);
+                    padding-bottom: var(--gap);
+
+                    .uge1,
+                    .uge2,
+                    .uge3,
+                    .uge4 {
+                        display: flex;
+                        justify-content: space-between;
+
+
+                        .kalenderDag {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 100%;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            p {
+                                margin: 0;
+                            }
+
+                        }
+
+                        .pink {
+                            background-color: var(--lightPink);
+                        }
+
+                        .gul {
+                            background-color: var(--lightYellow);
+                        }
+
+                        .brun {
+                            background-color: var(--lightBrown);
+                        }
+
+                        .grøn {
+                            background-color: var(--lightGreen);
+                        }
+
+                        .pinkLight {
+                            background-color: var(--lightPink);
+                            opacity: 0.5;
+                        }
+
+                        .gulLight {
+                            background-color: var(--lightYellow);
+                            opacity: 0.5;
+                        }
+
+                        .brunLight {
+                            background-color: var(--lightBrown);
+                            opacity: 0.5;
+                        }
+
+                        .grønLight {
+                            background-color: var(--lightGreen);
+                            opacity: 0.5;
+                        }
+
+                        .idag {
+                            background-color: #976B3A;
+                            color: var(--lightYellow);
+                            border: solid;
+                            border-color: var(--textColor);
+                            border-width: 2px;
+                            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    /* Animering af åbningstider */
+    .fullOpeninghours.animate,
+    .fullOpeninghoursFood.animate {
+        transition: transform 0.6s ease, opacity 0.6s ease, max-height 0.6s ease;
+    }
+
+    .fullOpeninghours.active,
+    .fullOpeninghoursFood.active {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: 600px;
+        pointer-events: auto;
+    }
+
+}
+
+.fullOpeninghours .street {
+
+    width: 160px;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--smallGap);
+    font-family: var(--textFont);
+    font-size: var(--smallHeaderTextSize);
+    font-weight: var(--fontWeight);
+}
+
+
+.fullOpeninghours .food {
+    width: 160px;
+    border: solid;
+    border-color: var(--primaryColor);
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    font-family: var(--textFont);
+    font-size: var(--smallHeaderTextSize);
+    font-weight: var(--fontWeight);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.fullOpeninghoursFood .street {
+    width: 160px;
+    border: solid;
+    border-color: var(--primaryColor);
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    font-family: var(--textFont);
+    font-size: var(--smallHeaderTextSize);
+    font-weight: var(--fontWeight);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.fullOpeninghoursFood .food {
+    width: 160px;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--smallGap);
+    font-family: var(--textFont);
+    font-size: var(--smallHeaderTextSize);
+    font-weight: var(--fontWeight);
+
+}
+
+
+/* ANDET STYLING */
+
+/* Kort over streetfood side */
+.kortSide {
+
+    img {
+        width: 100%;
+        padding-top: 90px;
+        padding-bottom: 180px;
+    }
+}
+
+
+main {
+    min-height: 100vh;
+}
+
+.fejlbesked {
+    display: flex;
+    justify-content: center;
+    padding: var(--gap);
+}

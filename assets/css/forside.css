@@ -1,0 +1,152 @@
+/* INTRO */
+.introSection {
+    padding-top: var(--sectionPadding);
+}
+
+
+/* CTA'er */
+.CTASection {
+    display: flex;
+    gap: var(--smallGap);
+    padding-top: var(--sectionPadding);
+
+}
+
+.CTA {
+    flex: 1;
+    text-decoration: none;
+    color: var(--textColor);
+    text-align: center;
+
+
+    img {
+        width: 100%;
+        aspect-ratio: 1/1;
+        object-fit: cover;
+        border-radius: 100%;
+    }
+
+}
+
+.CTA img:hover {
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.CTA img:active {
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* NYHEDER */
+.nyheder {
+    padding-top: var(--sectionPadding);
+    max-width: 100vw;
+    overflow: hidden;
+
+    h3,
+    p {
+        margin: 0 0 10px 0;
+    }
+}
+
+.nyhedsCards {
+    display: flex;
+    gap: var(--gap);
+    overflow-x: scroll;
+    overflow-y: hidden;
+    width: 100%;
+
+
+}
+
+.nyhedsCards::-webkit-scrollbar {
+    height: 10px;
+
+}
+
+.nyhedsCards::-webkit-scrollbar-track {
+    background: var(--lightPrimaryColor);
+}
+
+.nyhedsCards::-webkit-scrollbar-thumb {
+    background: var(--primaryColor);
+    border-radius: 10px;
+}
+
+.nyhedsCard {
+    background-color: var(--white);
+    min-width: 270px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: var(--gap);
+    text-decoration: none;
+    color: var(--textColor);
+    display: flex;
+    flex-direction: column;
+
+    .nyhedsCardText {
+        padding: var(--gap);
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        /* fylder al tilgængelig plads */
+        justify-content: space-between;
+        /* skubber button til bunden */
+    }
+
+    button,
+    .knap {
+        align-self: flex-end;
+    }
+
+    img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+    }
+}
+
+/* scrollpil */
+.scroll {
+    position: absolute;
+    right: 5%;
+    top: 55%;
+    transform: translateY(-50%);
+    background-color: rgba(1, 191, 211, 0.5);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+
+    animation: pilAnimation 1s ease-in-out infinite;
+}
+
+@keyframes pilAnimation {
+
+    0%,
+    100% {
+        transform: translateY(-50%) translateX(0);
+    }
+
+    50% {
+        transform: translateY(-50%) translateX(6px);
+    }
+}
+
+/* SPØRGSMÅL */
+.questions {
+    padding-top: var(--sectionPadding);
+
+    .questionsButtons {
+        display: flex;
+        justify-content: center;
+        gap: var(--gap);
+        padding-top: 15px;
+
+        button,
+        .knap {
+            width: 120px;
+        }
+    }
+}
