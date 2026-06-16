@@ -19,6 +19,7 @@ async function getBod() {
         const post = await response.json(); // konverterer json til javascript objekt
 
         renderBod(post); //kører funktionen til at vise bod på siden
+        renderSeOgså(); //kører funktionen til at vise se også cards på siden
 
     } catch (error) {
         console.error("Fejl:", error); //viser fejl i konsol hvis der er problemer med at hente data fra api'et
@@ -159,27 +160,7 @@ function renderBod(post) {
     <div class="seOgså">
     <h2>Se også...</h2>
 
-                <article class="bodCards">
-                    <a href="./specifikBod.html?id=3860" class="bodCard">
-    <img src="./assets/img/bar_madame.webp" alt="Bar Madame">
-    <div class="cardIndhold">
-        <div class="bodCardText">
-            <h2>Bar Madame</h2>
-            <p>Et bredt udvalg af kolde drikke fra specialøl og cocktails til forfriskende alkoholfri favoritter.</p>
-        </div>
-        <button>Læs mere</button>
-    </div>
-</a>
-<a href="./specifikBod.html?id=3667" class="bodCard">
-    <img src="./assets/img/sweetvibes.webp" alt="Sweet Vibes">
-    <div class="cardIndhold">
-        <div class="bodCardText">
-            <h2>Sweet Vibes</h2>
-            <p>Lækker sulten? Kage, vafler og ægte italiensk gelato is finder du her.</p>
-        </div>
-        <button>Læs mere</button>
-    </div>
-</a>
+                <article class="bodCards">  
                 </article>
 
     </div>
@@ -201,4 +182,58 @@ function renderBod(post) {
         menuItems.style.display = erSkjult ? "flex" : "none"; // hvis erSkjult er true, så sæt display til flex for at vise menu items, ellers sæt display til none for at skjule menu items
         pil.classList.toggle("roteret"); // toggler klassen "roteret" på pilen for at rotere den
     });
+}
+
+
+// Henter "Se også" boder dynamisk fra wordpress - Bar Madame og Sweet Vibes og indsætter i den nu tomme article med class bodCards
+
+// Id'er på de to boder der altid skal vises under "Se også"
+const barMadameId = 3860;
+const sweetVibesId = 3667;
+// Henter "Se også" boder dynamisk fra wordpress - Bar Madame og Sweet Vibes
+async function renderSeOgså() {
+    try {
+        const responseBarMadame = await fetch(`${baseUrl}/${barMadameId}?acf_format=standard`); // henter bod med id barMadameId
+        const responseSweetVibes = await fetch(`${baseUrl}/${sweetVibesId}?acf_format=standard`); // henter bod med id sweetVibesId
+
+        const barMadame = await responseBarMadame.json(); // konverterer json til javascript objekt
+        const sweetVibes = await responseSweetVibes.json(); // konverterer json til javascript objekt
+
+        const bodCardsContainer = document.querySelector(".bodCards"); // finder bodCards i den html vi lige har lavet med js
+
+        //Indsætter i html
+        bodCardsContainer.innerHTML = `
+            <a href="./specifikBod.html?id=${barMadame.id}" class="bodCard">
+                <img src="${barMadame.acf.herocard_billede.sizes["medium_large"]}" alt="Billede af mad fra ${barMadame.acf.titel}">
+                <div class="cardIndhold">
+                    <div class="bodCardText">
+                        <h2>${barMadame.acf.titel}</h2>
+                        <p>${barMadame.acf.intro_tekst}</p>
+                    </div>
+                    <button>Læs mere</button>
+                </div>
+            </a>
+            <a href="./specifikBod.html?id=${sweetVibes.id}" class="bodCard">
+                <img src="${sweetVibes.acf.herocard_billede.sizes["medium_large"]}" alt="Billede af mad fra ${sweetVibes.acf.titel}">
+                <div class="cardIndhold">
+                    <div class="bodCardText">
+                        <h2>${sweetVibes.acf.titel}</h2>
+                        <p>${sweetVibes.acf.intro_tekst}</p>
+                    </div>
+                    <button>Læs mere</button>
+                </div>
+            </a>
+        `;
+
+    } catch (error) {
+        console.error("Fejl:", error); //viser fejl i konsol hvis der er problemer med at hente data fra api'et
+
+        // Vis fejlbesked på siden
+        const fejl = document.querySelector(".overlaySection");
+        fejl.innerHTML = `
+        <div class="fejlbesked">
+            <p>Noget gik galt, prøv at genindlæse siden.</p>
+        </div>
+    `;
+    }
 }
