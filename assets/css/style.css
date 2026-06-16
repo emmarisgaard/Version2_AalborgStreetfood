@@ -106,6 +106,7 @@ body {
     .tilbageKnap {
         color: var(--textColor);
         font-size: var(--smallHeaderTextSize);
+        text-decoration: underline;
 
     }
 
@@ -581,5 +582,6 @@ html {
         width: fit-content;
         margin-left: auto;
         color: var(--textColor);
+        text-decoration: underline;
     }
 }
