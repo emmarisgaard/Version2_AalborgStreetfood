@@ -109,7 +109,6 @@
     position: absolute;
     right: 5%;
     top: 55%;
-    transform: translateY(-50%);
     background-color: rgba(1, 191, 211, 0.5);
     border-radius: 50%;
     width: 40px;
@@ -126,11 +125,11 @@
 
     0%,
     100% {
-        transform: translateY(-50%) translateX(0);
+        transform: translateX(0);
     }
 
     50% {
-        transform: translateY(-50%) translateX(6px);
+        transform: translateX(6px);
     }
 }
 
