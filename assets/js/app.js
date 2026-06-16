@@ -253,3 +253,16 @@ function renderOpeningHours() {
         fullOpeningHours.classList.add('active');
     });
 }
+
+
+
+
+
+
+
+// Registrerer service workeren når siden er loadet
+window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./service-worker.js");
+    }
+});
