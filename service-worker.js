@@ -1,39 +1,39 @@
 const cacheName = "aalborgStreetfood-cache-v1"
 
 const cacheAssets = [
-    // alt der skulle kunne hentes offline, hvilket er alle mapper
-    // html
- "index.html",
- "aktiviteter.html",
- "boder.html",
- "events.html",
- "faq.html",
- "kontakt.html",
- "kort.html",
- "specifikAktivitet.html",
- "specifikBod.html",
- "specifikEvent.html",
-//  css
- "aktiviteter.css",
- "boder.css",
- "events.css",
- "faq.css",
- "forside.css",
- "kontakt.css",
- "specifikAktivitet.css",
- "specifikBod.css",
- "specifikEvent.css",
- "style.css",
-//  JavaScript
-"aktiviteter.js",
-"boder.js",
- "events.js",
- "faq.js",
- "specifikAktivitet.js",
- "specifikBod.js",
- "specifikEvent.js",
-// img
- "assets/img/aktiviteterBillede.webp",
+  // alt der skulle kunne hentes offline, hvilket er alle mapper
+  // html
+  "index.html",
+  "aktiviteter.html",
+  "boder.html",
+  "events.html",
+  "faq.html",
+  "kontakt.html",
+  "kort.html",
+  "specifikAktivitet.html",
+  "specifikBod.html",
+  "specifikEvent.html",
+  //  css
+  "assets/css/aktiviteter.css",
+  "assets/css/boder.css",
+  "assets/css/events.css",
+  "assets/css/faq.css",
+  "assets/css/forside.css",
+  "assets/css/kontakt.css",
+  "assets/css/specifikAktivitet.css",
+  "assets/css/specifikBod.css",
+  "assets/css/specifikEvent.css",
+  "assets/css/style.css",
+  //  JavaScript
+  "assets/js/aktiviteter.js",
+  "assets/js/boder.js",
+  "assets/js/events.js",
+  "assets/js/faq.js",
+  "assets/js/specifikAktivitet.js",
+  "assets/js/specifikBod.js",
+  "assets/js/specifikEvent.js",
+  // img
+  "assets/img/aktiviteterBillede.webp",
   "assets/img/aktiviteterBilledeLille.webp",
   "assets/img/bar_madame.webp",
   "assets/img/boderBillede.webp",
@@ -51,7 +51,8 @@ const cacheAssets = [
   "assets/img/Kort.webp",
   "assets/img/Laktose.svg",
   "assets/img/logo.svg",
-  "assets/img/logoPng.png",
+  "assets/img/logov2_192x192.png",
+  "assets/img/logov2_512x512.png",
   "assets/img/Noedder.svg",
   "assets/img/Skaldyr.svg",
   "assets/img/sweetvibes.webp",
@@ -60,7 +61,7 @@ const cacheAssets = [
   "assets/img/Yoga-med-1Lille.webp"
 ];
 
-// INSTALL EVENT
+// INSTALLERE EVENT
 // Kører første gang service workeren installeres.
 // Her gemmes alle app-filer i browserens cache.
 self.addEventListener("install", (event) => {
@@ -71,8 +72,7 @@ self.addEventListener("install", (event) => {
     })
   );
 
-  // Aktiverer den nye service worker med det samme
-  // i stedet for at vente på næste side-load.
+  // Aktiverer den nye service worker med det samme i stedet for at vente på næste side-load.
   self.skipWaiting();
 });
 
