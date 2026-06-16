@@ -1,15 +1,21 @@
 {
     "name": "Aalborg streetfood",
-    "short_name": "Streetfood", //Det tekst der står under app ikonet, hvis der ikke er plads til hele navnet
+    "short_name": "Streetfood",
     "theme_color": "#01BFD3",
     "background_color": "#01BFD3",
-    "display": "standalone", //Appen åbner som en selvstændig app uden browserens adressefelt, faner og navigation. Det får webappen til at ligne en rigtig mobilapp.
+    "display": "standalone",
     "start_url": "./",
     "description": "Aalborg streetfood webapp",
     "icons": [
         {
-            "src": "./assets/img/logoPng.png",
-            "sizes": "247x208",
+            "src": "./assets/img/logov2_192x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "./assets/img/logov2_512x512.png",
+            "sizes": "512x512",
             "type": "image/png",
             "purpose": "any maskable"
         }
