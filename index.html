@@ -16,11 +16,6 @@
     <link rel="manifest" href="./manifest.json">
 </head>
 
-<script>
-    if ("serviceWorker" in navigator) {
-        navigator.serviceWorker.register("./service-worker.js");
-    }
-</script>
 
 <body>
     <header>
@@ -163,6 +158,12 @@
         </nav>
 
     </footer>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("/class/MMD-csd-s25/10700521/Version2_Aalborg/service-worker.js");
+        }
+    </script>
 </body>
 
 </html>

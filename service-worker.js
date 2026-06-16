@@ -1,64 +1,67 @@
+const baseUrl = "/class/MMD-csd-s25/10700521/Version2_AalborgStreetfood/";
+
+
 const cacheName = "aalborgStreetfood-cache-v1"
 
 const cacheAssets = [
   // alt der skulle kunne hentes offline, hvilket er alle mapper
   // html
-  "index.html",
-  "aktiviteter.html",
-  "boder.html",
-  "events.html",
-  "faq.html",
-  "kontakt.html",
-  "kort.html",
-  "specifikAktivitet.html",
-  "specifikBod.html",
-  "specifikEvent.html",
+  baseUrl + "index.html",
+  baseUrl + "aktiviteter.html",
+  baseUrl + "boder.html",
+  baseUrl + "events.html",
+  baseUrl + "faq.html",
+  baseUrl + "kontakt.html",
+  baseUrl + "kort.html",
+  baseUrl + "specifikAktivitet.html",
+  baseUrl + "specifikBod.html",
+  baseUrl + "specifikEvent.html",
   //  css
-  "assets/css/aktiviteter.css",
-  "assets/css/boder.css",
-  "assets/css/events.css",
-  "assets/css/faq.css",
-  "assets/css/forside.css",
-  "assets/css/kontakt.css",
-  "assets/css/specifikAktivitet.css",
-  "assets/css/specifikBod.css",
-  "assets/css/specifikEvent.css",
-  "assets/css/style.css",
+  baseUrl + "assets/css/aktiviteter.css",
+  baseUrl + "assets/css/boder.css",
+  baseUrl + "assets/css/events.css",
+  baseUrl + "assets/css/faq.css",
+  baseUrl + "assets/css/forside.css",
+  baseUrl + "assets/css/kontakt.css",
+  baseUrl + "assets/css/specifikAktivitet.css",
+  baseUrl + "assets/css/specifikBod.css",
+  baseUrl + "assets/css/specifikEvent.css",
+  baseUrl + "assets/css/style.css",
   //  JavaScript
-  "assets/js/aktiviteter.js",
-  "assets/js/boder.js",
-  "assets/js/events.js",
-  "assets/js/faq.js",
-  "assets/js/specifikAktivitet.js",
-  "assets/js/specifikBod.js",
-  "assets/js/specifikEvent.js",
+  baseUrl + "assets/js/aktiviteter.js",
+  baseUrl + "assets/js/boder.js",
+  baseUrl + "assets/js/events.js",
+  baseUrl + "assets/js/faq.js",
+  baseUrl + "assets/js/specifikAktivitet.js",
+  baseUrl + "assets/js/specifikBod.js",
+  baseUrl + "assets/js/specifikEvent.js",
   // img
-  "assets/img/aktiviteterBillede.webp",
-  "assets/img/aktiviteterBilledeLille.webp",
-  "assets/img/bar_madame.webp",
-  "assets/img/boderBillede.webp",
-  "assets/img/boderBilledeLille.webp",
-  "assets/img/boernenesDag.webp",
-  "assets/img/boernenesDagLille.webp",
-  "assets/img/elsanto.webp",
-  "assets/img/elsantoLille.webp",
-  "assets/img/eventsBillede.webp",
-  "assets/img/eventsBilledeLille.webp",
-  "assets/img/faqBillede.webp",
-  "assets/img/forsideBillede.webp",
-  "assets/img/Gluten.svg",
-  "assets/img/kontaktBillede.webp",
-  "assets/img/Kort.webp",
-  "assets/img/Laktose.svg",
-  "assets/img/logo.svg",
-  "assets/img/logov2_192x192.png",
-  "assets/img/logov2_512x512.png",
-  "assets/img/Noedder.svg",
-  "assets/img/Skaldyr.svg",
-  "assets/img/sweetvibes.webp",
-  "assets/img/Vegetar.svg",
-  "assets/img/Yoga-med-1.webp",
-  "assets/img/Yoga-med-1Lille.webp"
+  baseUrl + "assets/img/aktiviteterBillede.webp",
+  baseUrl + "assets/img/aktiviteterBilledeLille.webp",
+  baseUrl + "assets/img/bar_madame.webp",
+  baseUrl + "assets/img/boderBillede.webp",
+  baseUrl + "assets/img/boderBilledeLille.webp",
+  baseUrl + "assets/img/boernenesDag.webp",
+  baseUrl + "assets/img/boernenesDagLille.webp",
+  baseUrl + "assets/img/elsanto.webp",
+  baseUrl + "assets/img/elsantoLille.webp",
+  baseUrl + "assets/img/eventsBillede.webp",
+  baseUrl + "assets/img/eventsBilledeLille.webp",
+  baseUrl + "assets/img/faqBillede.webp",
+  baseUrl + "assets/img/forsideBillede.webp",
+  baseUrl + "assets/img/Gluten.svg",
+  baseUrl + "assets/img/kontaktBillede.webp",
+  baseUrl + "assets/img/Kort.webp",
+  baseUrl + "assets/img/Laktose.svg",
+  baseUrl + "assets/img/logo.svg",
+  baseUrl + "assets/img/logov2_192x192.png",
+  baseUrl + "assets/img/logov2_512x512.png",
+  baseUrl + "assets/img/Noedder.svg",
+  baseUrl + "assets/img/Skaldyr.svg",
+  baseUrl + "assets/img/sweetvibes.webp",
+  baseUrl + "assets/img/Vegetar.svg",
+  baseUrl + "assets/img/Yoga-med-1.webp",
+  baseUrl + "assets/img/Yoga-med-1Lille.webp"
 ];
 
 // INSTALLERE EVENT
@@ -127,7 +130,7 @@ self.addEventListener("fetch", (event) => {
         // hvis nettet fejler og det er en navigation
         // returneres index.html som offline fallback
         if (isNavigationRequest) {
-          return caches.match("index.html");
+          return caches.match(baseUrl + "index.html");
         }
 
       });
