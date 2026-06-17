@@ -122,11 +122,11 @@ body {
     header {
         height: 90px;
         background-color: var(--primaryColor);
-        z-index: 2;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
+        z-index: 2;
 
         nav {
             display: flex;
@@ -167,14 +167,15 @@ body {
     /* STYLES */
     /* General styling, der går igen på tværs af siderne */
     .heroBillede {
-        top: 90px;
+        top: 0;
         left: 0;
         right: 0;
         position: fixed;
+        z-index: 1;
 
 
         img {
-            height: 250px;
+            height: 300px;
             width: 100%;
             position: relative;
             object-fit: cover;
@@ -190,6 +191,7 @@ body {
         right: 0;
         padding: 20px;
         padding-bottom: 150px;
+        z-index: 3;
     }
 
     hr {
