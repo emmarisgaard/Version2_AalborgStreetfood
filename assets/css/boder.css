@@ -93,3 +93,21 @@
         }
     }
 }
+
+@media (min-width: 600px) {
+    .bodCards {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width: 1120px) {
+    .bodCards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (min-width: 1250px) {
+    .bodCards {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}

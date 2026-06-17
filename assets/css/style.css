@@ -696,8 +696,6 @@ html {
 @media (min-width: 1250px) {
 
     body .overlaySection {
-        padding: 60px 400px var(--smallGap) 400px;
-
         h1 {
             font-size: 40px;
         }
