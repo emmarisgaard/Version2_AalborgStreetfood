@@ -3,26 +3,16 @@
 }
 
 
-/* NYT - bruger flexbox i stedet for grid, så vores cards er mere responsive */
+/* NYT - gør vores cards er mere responsive */
 .bodCards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    /*Bruger autofill og minmax til automatisk at tilpasse hvor mange cards der vises til skærmens bredde. Cards skal altid være minimum 150 px brede, og altid være lige brede. */
     gap: var(--smallGap);
     padding-bottom: var(--sectionPadding);
 }
 
 
-.bodCard {
-    flex: 1 1 150px;
-    background-color: var(--white);
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
-    text-decoration: none;
-    color: var(--textColor);
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: var(--smallGap);
-}
 
 
 /* Vores gamle styling af cards med grid */
@@ -37,14 +27,14 @@
 } */
 
 .bodCard {
-    /* background-color: var(--white);
+    background-color: var(--white);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: var(--textColor);
     position: relative;
     display: flex;
     flex-direction: column;
-    margin-bottom: var(--smallGap); */
+    margin-bottom: var(--smallGap);
 
     .bodCardText {
         display: flex;
