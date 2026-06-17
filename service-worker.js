@@ -61,7 +61,9 @@ const cacheAssets = [
   baseUrl + "assets/img/sweetvibes.webp",
   baseUrl + "assets/img/Vegetar.svg",
   baseUrl + "assets/img/Yoga-med-1.webp",
-  baseUrl + "assets/img/Yoga-med-1Lille.webp"
+  baseUrl + "assets/img/Yoga-med-1Lille.webp",
+  baseUrl + "assets/img/logo_pink.svg.webp",
+  baseUrl + "assets/img/logo_sort.svg.webp",
 ];
 
 // INSTALLERE EVENT
@@ -78,6 +80,8 @@ self.addEventListener("install", (event) => {
   // Aktiverer den nye service worker med det samme i stedet for at vente på næste side-load.
   self.skipWaiting();
 });
+
+
 
 
 // ACTIVATE EVENT
@@ -100,6 +104,9 @@ self.addEventListener("activate", (event) => {
   // Gør at service workeren straks styrer alle åbne faner
   self.clients.claim();
 });
+
+
+
 
 
 // FETCH EVENT
