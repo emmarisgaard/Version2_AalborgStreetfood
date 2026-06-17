@@ -57,6 +57,12 @@ a {
 
         margin: var(--smallGap) var(--gap);
     }
+
+    img {
+        max-height: 380px;
+        margin-left: var(--gap);
+        margin-bottom: var(--smallGap)
+    }
 }
 
 
