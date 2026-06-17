@@ -253,3 +253,9 @@ function renderOpeningHours() {
         fullOpeningHours.classList.add('active');
     });
 }
+
+
+
+
+
+

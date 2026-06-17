@@ -106,6 +106,7 @@ body {
     .tilbageKnap {
         color: var(--textColor);
         font-size: var(--smallHeaderTextSize);
+        text-decoration: underline;
 
     }
 
@@ -181,7 +182,7 @@ body {
         left: 0;
         right: 0;
         padding: 20px;
-        padding-bottom: 200px;
+        padding-bottom: 150px;
     }
 
     hr {
@@ -248,6 +249,11 @@ body {
 
             a:active {
                 color: var(--darkSecondaryColor);
+            }
+
+            img {
+                height: 30px;
+                width: 30px;
             }
 
 
@@ -559,8 +565,28 @@ main {
     min-height: 100vh;
 }
 
+/* Error besked */
 .fejlbesked {
     display: flex;
     justify-content: center;
     padding: var(--gap);
+}
+
+/* Scroll to top knap */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+.topKnap {
+    display: block;
+    margin-top: var(--sectionPadding);
+
+    a {
+        display: block;
+        width: fit-content;
+        margin-left: auto;
+        color: var(--textColor);
+        text-decoration: underline;
+    }
 }
