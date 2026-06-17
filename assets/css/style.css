@@ -106,8 +106,15 @@ body {
     .tilbageKnap {
         color: var(--textColor);
         font-size: var(--smallHeaderTextSize);
-        text-decoration: underline;
+        text-decoration: none;
+    }
 
+    .tilbageKnap:hover {
+        text-decoration: underline;
+    }
+
+    .tilbageKnap:active {
+        text-decoration: underline;
     }
 
 
@@ -587,6 +594,14 @@ html {
         width: fit-content;
         margin-left: auto;
         color: var(--textColor);
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    a:active {
         text-decoration: underline;
     }
 }
