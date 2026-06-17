@@ -496,23 +496,23 @@ body {
 
 }
 
-.fullOpeninghours .street {
-
-    width: 160px;
-    background-color: var(--primaryColor);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: var(--smallGap);
-    font-family: var(--textFont);
-    font-size: var(--smallHeaderTextSize);
-    font-weight: var(--fontWeight);
-}
-
-
+/* Styling af  boder toggle når street er valgt*/
 .fullOpeninghours .food {
     width: 160px;
+    background-color: var(--primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--smallGap);
+    font-family: var(--textFont);
+    font-size: var(--smallHeaderTextSize);
+    /* font-weight: var(--fontWeight); */
+}
+
+/* Styling af street toggle når street er valgt */
+.fullOpeninghours .street {
+    width: 160px;
     border: solid;
     border-color: var(--primaryColor);
     border-width: 5px;
@@ -528,7 +528,8 @@ body {
 
 }
 
-.fullOpeninghoursFood .street {
+/* Styling af food toggle når food er valgt */
+.fullOpeninghoursFood .food {
     width: 160px;
     border: solid;
     border-color: var(--primaryColor);
@@ -544,7 +545,8 @@ body {
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
-.fullOpeninghoursFood .food {
+/* Styling af street toggle når food er valgt */
+.fullOpeninghoursFood .street {
     width: 160px;
     background-color: var(--primaryColor);
     display: flex;
@@ -554,7 +556,7 @@ body {
     padding: var(--smallGap);
     font-family: var(--textFont);
     font-size: var(--smallHeaderTextSize);
-    font-weight: var(--fontWeight);
+    /* font-weight: var(--fontWeight); */
 
 }
 
