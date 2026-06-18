@@ -256,6 +256,10 @@ body {
                 a {
                     color: var(--secondaryColor);
                 }
+
+                i {
+                    color: var(--secondaryColor);
+                }
             }
 
             a:active {
