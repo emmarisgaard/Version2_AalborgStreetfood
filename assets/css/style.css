@@ -626,7 +626,7 @@ html {
 @media (min-width: 650px) {
 
     body .overlaySection {
-        padding: 40px 100px var(--smallGap) 100px;
+        padding: 40px 100px 150px 100px;
 
         p,
         h3,
@@ -664,7 +664,7 @@ html {
 
 @media (min-width: 800px) {
     body .overlaySection {
-        padding: 60px 150px var(--smallGap) 150px;
+        padding: 60px 150px 150ppx 150px;
 
         h1 {
             font-size: 30px;
@@ -684,7 +684,7 @@ html {
 @media (min-width: 1050px) {
 
     body .overlaySection {
-        padding: 60px 250px var(--smallGap) 250px;
+        padding: 60px 250px 150px 250px;
     }
 
     .openingHours {
