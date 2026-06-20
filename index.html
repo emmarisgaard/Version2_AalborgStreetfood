@@ -52,15 +52,19 @@
             <!-- CTA cirkler -->
             <article class="CTASection">
                 <a href="./boder.html" class="CTA">
-                    <img src="./assets/img/boderBilledLille.webp" alt="Boder">
+                    <img src="./assets/img/boderBilledLille.webp" srcset="./assets/img/boderBilled.webp 1200w"
+                        sizes="(min-width: 1000px) 1200px" alt="Boder">
                     <h2>Boder</h2>
                 </a>
                 <a href="./aktiviteter.html" class="CTA">
-                    <img src="./assets/img/aktiviteterBilledeLille.webp" alt="Aktiviteter billede">
+                    <img src="./assets/img/aktiviteterBilledeLille.webp"
+                        srcset="./assets/img/aktiviteterBillede.webp 1200w" sizes="(min-width: 1000px) 1200px"
+                        alt="Aktiviteter billede">
                     <h2>Aktiviteter</h2>
                 </a>
                 <a href="./events.html" class="CTA">
-                    <img src="./assets/img/eventsBilledeLille.webp" alt="Events billede">
+                    <img src="./assets/img/eventsBilledeLille.webp" srcset="./assets/img/eventsBillede.webp 1200w"
+                        sizes="(min-width: 1000px) 1200px" alt="Events billede">
                     <h2>Events</h2>
                 </a>
             </article>
@@ -72,7 +76,8 @@
 
                     <!-- Nyhed 1 -->
                     <a href="./specifikEvent.html?id=3793" class="nyhedsCard">
-                        <img src="./assets/img/boernenesDagLille.webp" alt="Billede fra børnenes dag">
+                        <img src="./assets/img/boernenesDagLille.webp" srcset="./assets/img/boernenesDag.webp 1200w"
+                            sizes="(min-width: 1000px) 1200px" alt="Billede fra børnenes dag">
                         <div class="nyhedsCardText">
                             <h3>Børnenes dag hver søndag</h3>
                             <p>Hver søndag forvandles Aalborg Streetfood til et sandt kreativt paradis for de yngste.
@@ -83,7 +88,8 @@
 
                     <!-- Nyhed 2 -->
                     <a href="./specifikBod.html?id=3661" class="nyhedsCard">
-                        <img src="./assets/img/elsantoLille.webp" alt="Billede af den nye madbod El Santo">
+                        <img src="./assets/img/elsantoLille.webp" srcset="./assets/img/elsanto.webp 1200w"
+                            sizes="(min-width: 1000px) 1200px" alt="Billede af den nye madbod El Santo">
                         <div class="nyhedsCardText">
                             <h3>Ny madbod: El Santo - Mexican Streetfood</h3>
                             <p>Autentisk smag fra Mexico - oplev burritos, nachos og klassiske mexicanske favoritter.
@@ -94,12 +100,11 @@
 
                     <!-- Nyhed 3 -->
                     <a href="./specifikEvent.html?id=3803" class="nyhedsCard">
-                        <img src="./assets/img/Yoga-med-1Lille.webp"
-                            alt="Billede fra fra yoga på græsplænen med Amanda">
+                        <img src="./assets/img/Yoga-med-1Lille.webp" srcset="./assets/img/Yoga-med-1.webp 1200w"
+                            sizes="(min-width: 1000px) 1200px" alt="Billede fra fra yoga på græsplænen med Amanda">
                         <div class="nyhedsCardText">
                             <h3>13. juni kl. 10-13: Yoga på græsplænen</h3>
-                            <p>Start dagen med ro og yoga i hyggelige omgivelser ved Limfjorden.
-                            </p>
+                            <p>Start dagen med ro og yoga i hyggelige omgivelser ved Limfjorden.</p>
                             <div class="knap">Læs mere</div>
                         </div>
                     </a>
@@ -162,7 +167,7 @@
 
     <script>
         if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("/class/MMD-csd-s25/10700521/Version2_AalborgStreetfood/service-worker.js");
+            navigator.serviceWorker.register("./service-worker.js");
         }
     </script>
 </body>

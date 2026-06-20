@@ -1,5 +1,4 @@
-const baseUrl = "/class/MMD-csd-s25/10700521/Version2_AalborgStreetfood/";
-
+const baseUrl = self.location.pathname.replace("service-worker.js", "");
 
 const cacheName = "aalborgStreetfood-cache-v1"
 
@@ -62,8 +61,8 @@ const cacheAssets = [
   baseUrl + "assets/img/Vegetar.svg",
   baseUrl + "assets/img/Yoga-med-1.webp",
   baseUrl + "assets/img/Yoga-med-1Lille.webp",
-  baseUrl + "assets/img/logo_pink.svg.webp",
-  baseUrl + "assets/img/logo_sort.svg.webp",
+  baseUrl + "assets/img/logo_pink.svg",
+  baseUrl + "assets/img/logo_sort.svg",
 ];
 
 // INSTALLERE EVENT
